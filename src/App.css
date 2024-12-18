@@ -1,4 +1,3 @@
-/* Общие стили для темной минималистичной темы */
 body {
   margin: 0;
   padding: 0;
@@ -19,10 +18,9 @@ h1 {
   font-weight: 600;
 }
 
-/* Основной контейнер с горизонтальными блоками */
 .container {
   display: flex;
-  flex-direction: row; /* Горизонтальное расположение */
+  flex-direction: row; 
   gap: 2rem;
   width: 95%;
   max-width: 1200px;
@@ -33,7 +31,6 @@ h1 {
   animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Анимация появления */
 @keyframes fadeIn {
   from {
       opacity: 0;
@@ -45,7 +42,6 @@ h1 {
   }
 }
 
-/* Блок шифрования и дешифрования */
 .section {
   background: #2C2C2C;
   border-radius: 8px;
@@ -73,29 +69,27 @@ label {
   color: #E0E0E0;
 }
 
-/* Стили для textarea - одинаковая ширина и высота в блоках */
 textarea {
-  width: 93.5%;            /* Растягиваем на всю ширину блока */
-  height: 120px;          /* Задаём фиксированную высоту */
-  padding: 12px;          /* Отступы внутри */
-  margin-bottom: 1rem;    /* Отступ снизу */
+  width: 93.5%;        
+  height: 120px;          
+  padding: 12px;         
+  margin-bottom: 1rem;   
   border: none;
-  border-radius: 5px;     /* Скруглённые углы */
-  background: #1F1F1F;    /* Цвет фона */
-  color: #F3F3F3;         /* Цвет текста */
+  border-radius: 5px;     
+  background: #1F1F1F;   
+  color: #F3F3F3;        
   font-size: 1rem;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-  resize: none;           /* Отключаем изменение размеров */
+  resize: none;         
   transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 textarea:focus {
-  outline: none;          /* Убираем обводку */
-  box-shadow: 0 0 10px #BB86FC; /* Эффект подсветки при фокусе */
-  transform: scale(1.01); /* Небольшое увеличение при фокусе */
+  outline: none;        
+  box-shadow: 0 0 10px #BB86FC; 
+  transform: scale(1.01); 
 }
 
-/* Поле для ввода ключа в одну строку */
 input {
   width: 92%;
   padding: 10px;
@@ -134,7 +128,7 @@ button:hover {
 }
 
 .result-area {
-  height: 150px; /* Увеличенная высота для результата */
+  height: 150px;
   background: #1F1F1F;
   color: #F3F3F3;
   font-size: 1rem;
@@ -152,7 +146,7 @@ button:hover {
   height: 30px;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  margin: 1rem auto; /* Центрирование спиннера */
+  margin: 1rem auto; 
 }
 
 @keyframes spin {
@@ -161,7 +155,6 @@ button:hover {
   }
 }
 
-/* Дополнительные стили для кнопок при загрузке */
 button:disabled {
   background-color: #5A5A5A;
   cursor: not-allowed;
@@ -170,13 +163,13 @@ button:disabled {
 
 .button-group {
   display: flex;
-  justify-content: space-between; /* Равномерное распределение кнопок */
-  gap: 0.5rem; /* Отступ между кнопками */
-  margin-bottom: 1rem; /* Отступ снизу */
+  justify-content: space-between; 
+  gap: 0.5rem; 
+  margin-bottom: 1rem; 
 }
 
 button {
-  flex: 1; /* Равномерное распределение ширины кнопок */
+  flex: 1; 
   padding: 10px;
   font-size: 1rem;
   color: #121212;
