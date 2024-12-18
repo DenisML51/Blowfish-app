@@ -101,14 +101,12 @@ encrypt(text) {
 }
 
 decrypt(encryptedText) {
-    // Проверка на Base64 (опционально)
     if (!/^[A-Za-z0-9+/]+={0,2}$/.test(encryptedText)) {
         throw new Error("Ошибка дешифрования: строка содержит некорректные символы.");
     }
 
     const buffer = Buffer.from(encryptedText, 'base64');
 
-    // Убедимся, что длина данных кратна 8 байтам
     if (buffer.length % 8 !== 0) {
         return "Ошибка дешифрования: длина данных не кратна 8 байтам.";
     }
@@ -127,15 +125,14 @@ decrypt(encryptedText) {
 
     const decryptedBuffer = Buffer.from(byteArray);
 
-    // Попытка удалить паддинг (если паддинг невалидный, просто вернём результат как есть)
     try {
         const padding = decryptedBuffer[decryptedBuffer.length - 1];
         if (padding > 8 || padding < 1) {
-            return decryptedBuffer.toString('utf-8'); // Вернуть как есть
+            return decryptedBuffer.toString('utf-8'); 
         }
         return decryptedBuffer.slice(0, -padding).toString('utf-8');
     } catch (e) {
-        return decryptedBuffer.toString('utf-8'); // Вернуть как есть при ошибке
+        return decryptedBuffer.toString('utf-8'); 
     }
 }
 
